@@ -1,0 +1,332 @@
+
+$menufontsize: 16px
+$projectfontsize: 14px
+$outerborderradius: 20px
+$innerborderradius: 10px
+$menuwidth: 220px
+$menuwidthwborder: 218px
+$menutopbottompadding: 8px
+$projectdetailwidth: 300px
+$cat: #FFC500
+$light-cat15: #FFD64D //color.adjust($cat, $lightness:15%)
+$light-cat30: #FFE899 //color.adjust($cat, $lightness:30%)
+$light-cat40: #FFF3CC //color.adjust($cat, $lightness:40%)
+$project-col1: 80px
+$project-col2: 180px
+$project-col3: 180px
+$project-col4: 400px
+$project-col5: 100px
+$project-col6: 30px
+$task-col1: 100px
+$task-col2: 80px
+$task-col3: 80px
+$task-col4: 70px
+$task-col5: 70px
+$task-col6: 70px
+$task-col7: 70px
+$task-col8: 40px
+$task-col9: 25px
+$task-col10: 25px
+$comment-col1: 800px
+$comment-col2: 100px
+$comment-col3: 100px
+$comment-col4: 100px
+$comment-col5: 100px
+$comment-col6: 100px
+$comment-col7: 100px
+$comment-col8: 100px
+$comment-col9: 100px
+
+
+
+body
+  width: 100vw
+  height: 100vh
+  background-color: #ffffff
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: auto
+  user-select: none
+  font-family: Roboto, sans-serif
+
+span
+  width: 100%
+  height: 100%
+  display: block
+
+select 
+  -o-appearance: none
+  -ms-appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+option
+  padding: 5px
+
+#catisoproduction
+  width: 1300px
+  height: 95vh
+  background-color: #FFFFFF //$cat
+  display: grid
+  grid-template-columns: $menuwidth auto
+  grid-template-rows: 50px auto 50px
+  border-radius: $outerborderradius
+  box-shadow: 0 3px 10px #000000
+  #catisoheader
+    width: 100%
+    background-color: #FFFFFF //$light-cat40
+    text-align: center
+    font-size: $menufontsize
+    border-top-left-radius: $outerborderradius
+    border-top-right-radius: $outerborderradius
+    grid-column-start: 1
+    grid-column-end: 3
+    border-bottom: 2px solid $cat
+    display: flex
+    align-items: center
+    justify-content: center
+    .logo
+      height: 25px
+  #catisoleftmenu
+    width: $menuwidthwborder
+    height: auto
+    background-color: #FFFFFF //$light-cat40
+    border-top-left-radius: $outerborderradius
+    border-bottom-left-radius: $outerborderradius
+    border-right: 2px solid $cat
+    #catisoengineers
+      width: 100%
+      background-color: #FFFFFF //$light-cat40
+      .all-container, .manager-container, .engineer-container
+        width: 101%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+      .all
+        width: $menuwidthwborder
+        padding: $menutopbottompadding 0 $menutopbottompadding 5%
+        font-size: $menufontsize
+      .manager
+        width: 75%
+        padding: $menutopbottompadding 0 $menutopbottompadding 10%
+        font-size: $menufontsize
+      .man
+        width: 10%
+        padding: $menutopbottompadding 5% $menutopbottompadding 0
+        text-align: right
+        font-size: $menufontsize
+      .engineer
+        width: 85%
+        padding: $menutopbottompadding 0 $menutopbottompadding 15%
+        font-size: $menufontsize
+      .selected
+        background-color: $light-cat15
+      .not-selected
+  
+  .projects-container
+    background-color: #FFFFFF //$light-cat30
+    width: 100%
+    overflow: auto
+    display: flex
+    flex-direction: column
+    .project-col1
+      width: $project-col1
+      font-size: $menufontsize
+    .project-col2
+      width: $project-col2
+      font-size: $menufontsize
+    .project-col3
+      width: $project-col3
+      font-size: $menufontsize
+    .project-col4 
+      width: $project-col4
+      font-size: $menufontsize
+    .project-col5
+      width: $project-col5
+      font-size: $menufontsize
+    .project-col6
+      width: $project-col6
+      font-szie: $menufontsize
+    .project-label-container
+      padding: $menutopbottompadding 22px
+      width: auto
+      display: flex
+      font-weight: bolder
+    .project-container
+      padding: 1px 10px 0 10px
+      .project-header
+        display: flex
+        align-items: center
+        border: 2px solid $cat
+        border-radius: $innerborderradius
+        padding-left: 10px
+        background-color: $light-cat15
+        .project-num
+          width: 80px
+          font-size: $menufontsize
+        .project-name
+          width: 300px
+          font-size: $menufontsize
+        .project-engineer
+          width: 200px
+          font-size: $menufontsize
+      .project-body
+        margin: 0 1% 1% 1%
+        padding: 1%
+        width: 95.7%
+        border-left: 2px solid $cat
+        border-right: 2px solid $cat
+        border-bottom: 2px solid $cat
+        background-color: $light-cat40
+        border-bottom-left-radius: $outerborderradius
+        border-bottom-right-radius: $outerborderradius
+        display: grid
+        align-items: start
+        grid-template-columns: $projectdetailwidth auto
+        grid-template-rows: auto auto
+        grid-gap: 10px
+        .body-details
+          grid-row-start: 1
+          grid-row-end: 3
+          display: grid
+          align-items: center
+          grid-template-columns: 80px 190px
+          grid-gap: 5px 5px
+          border: 2px solid $cat
+          padding: 10px 10px 5px 10px
+          border-radius: $innerborderradius
+          .body-detail-label 
+            text-align: right
+            font-size: $projectfontsize
+          .body-detail
+            font-size: $projectfontsize
+          .body-detail-dropdown
+          .body-detail-dropdown-edit
+            background-color: $light-cat40
+            border: none
+            border-radius: 5px
+            font-size: $projectfontsize
+          .body-detail-input
+          .body-detail-input-edit
+            background-color: $light-cat40
+            border: none
+            border-radius: 5px
+            font-size: $projectfontsize
+          .body-detail-delete
+            text-align: right          
+          .body-detail-save
+
+        .body-tasks
+          display: flex
+          flex-direction: column
+          border: 2px solid $cat
+          padding: 10px
+          border-radius: $innerborderradius
+          .body-task-label
+            display: flex
+          .body-task
+            display: flex
+            flex-direction: column
+          .body-task-detail
+            display: flex
+            align-items: center
+          .body-task-input
+            background-color: $light-cat40
+            padding: 0
+            border: none
+            border-radius: 5px
+            font-size: $projectfontsize
+          .task-col1
+            width: $task-col1
+            text-align: center
+          .task-col2
+            width: $task-col2
+            text-align: center
+          .task-col3
+            width: $task-col3
+            text-align: center
+          .task-col4
+            width: $task-col4
+            text-align: center
+          .task-col5
+            width: $task-col5
+            text-align: center
+          .task-col6
+            width: $task-col6
+            text-align: center
+          .task-col7
+            width: $task-col7
+            text-align: center
+          .task-col8
+            width: $task-col8
+            text-align: center
+            margin: 0
+          .task-col9
+            width: $task-col9
+          .task-col10
+            width: $task-col10
+          .body-task-add
+            display: flex
+            align-items: center
+          .task-add-input
+            border: 0
+            padding: 0
+            font-size: $projectfontsize
+            height: 22px
+
+        .body-comments
+          border: 2px solid $cat
+          padding: 10px 10px 5px 10px
+          border-radius: $innerborderradius 
+          .body-comment-add
+            margin-bottom: 5px
+            display: flex
+            align-items: center
+            .add-space
+              width: 80px
+              font-size: $projectfontsize
+              text-align: right
+            .add-button
+              width: 80px
+              margin-left: 5px
+            .add-text
+              width: 477px
+              margin: 0 0 0 1%
+              padding-right: 5px
+          .body-comment
+            display: flex
+            align-items: center
+            margin-bottom: 5px
+            .body-comment-date
+              font-size: 12px
+              width: 80px
+              text-align: center
+            .body-comment-text      
+              width: 480px
+              padding: 5px 0 5px 5px
+              border: 1px solid $cat
+              border-radius: $innerborderradius
+              margin: 0 1% 0 1%
+              background-color: $light-cat40
+              font-size: $projectfontsize
+            .body-comment-delete            
+              width: 25px
+            .body-comment-save
+              width: 25px
+
+
+  #catisofooter
+    width: 100%
+    background-color: #FFFFFF //$light-cat40
+    text-align: center
+    font-size: $menufontsize
+    border-bottom-left-radius: $outerborderradius
+    border-bottom-right-radius: $outerborderradius
+    border-top: 2px solid $cat
+    grid-column-start: 1
+    grid-column-end: 3
+    display: flex
+    align-items: center
+    justify-content: center

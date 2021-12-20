@@ -1,13 +1,347 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: Roboto, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+span {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
+
+select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+option {
+  padding: 5px;
+}
+
+#catisoproduction {
+  width: 1300px;
+  height: 95vh;
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 220px auto;
+  grid-template-rows: 50px auto 50px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px #000000;
+}
+#catisoproduction #catisoheader {
+  width: 100%;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-bottom: 2px solid #FFC500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#catisoproduction #catisoheader .logo {
+  height: 25px;
+}
+#catisoproduction #catisoleftmenu {
+  width: 218px;
+  height: auto;
+  background-color: #FFFFFF;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: 2px solid #FFC500;
+}
+#catisoproduction #catisoleftmenu #catisoengineers {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+#catisoproduction #catisoleftmenu #catisoengineers .all-container, #catisoproduction #catisoleftmenu #catisoengineers .manager-container, #catisoproduction #catisoleftmenu #catisoengineers .engineer-container {
+  width: 101%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#catisoproduction #catisoleftmenu #catisoengineers .all {
+  width: 218px;
+  padding: 8px 0 8px 5%;
+  font-size: 16px;
+}
+#catisoproduction #catisoleftmenu #catisoengineers .manager {
+  width: 75%;
+  padding: 8px 0 8px 10%;
+  font-size: 16px;
+}
+#catisoproduction #catisoleftmenu #catisoengineers .man {
+  width: 10%;
+  padding: 8px 5% 8px 0;
+  text-align: right;
+  font-size: 16px;
+}
+#catisoproduction #catisoleftmenu #catisoengineers .engineer {
+  width: 85%;
+  padding: 8px 0 8px 15%;
+  font-size: 16px;
+}
+#catisoproduction #catisoleftmenu #catisoengineers .selected {
+  background-color: #FFD64D;
+}
+#catisoproduction .projects-container {
+  background-color: #FFFFFF;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+#catisoproduction .projects-container .project-col1 {
+  width: 80px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-col2 {
+  width: 180px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-col3 {
+  width: 180px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-col4 {
+  width: 400px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-col5 {
+  width: 100px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-col6 {
+  width: 30px;
+  font-szie: 16px;
+}
+#catisoproduction .projects-container .project-label-container {
+  padding: 8px 22px;
+  width: auto;
+  display: flex;
+  font-weight: bolder;
+}
+#catisoproduction .projects-container .project-container {
+  padding: 1px 10px 0 10px;
+}
+#catisoproduction .projects-container .project-container .project-header {
+  display: flex;
+  align-items: center;
+  border: 2px solid #FFC500;
+  border-radius: 10px;
+  padding-left: 10px;
+  background-color: #FFD64D;
+}
+#catisoproduction .projects-container .project-container .project-header .project-num {
+  width: 80px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-container .project-header .project-name {
+  width: 300px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-container .project-header .project-engineer {
+  width: 200px;
+  font-size: 16px;
+}
+#catisoproduction .projects-container .project-container .project-body {
+  margin: 0 1% 1% 1%;
+  padding: 1%;
+  width: 95.7%;
+  border-left: 2px solid #FFC500;
+  border-right: 2px solid #FFC500;
+  border-bottom: 2px solid #FFC500;
+  background-color: #FFF3CC;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: 300px auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-details {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 80px 190px;
+  grid-gap: 5px 5px;
+  border: 2px solid #FFC500;
+  padding: 10px 10px 5px 10px;
+  border-radius: 10px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-details .body-detail-label {
+  text-align: right;
+  font-size: 14px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-details .body-detail {
+  font-size: 14px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-details .body-detail-dropdown-edit {
+  background-color: #FFF3CC;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-details .body-detail-input-edit {
+  background-color: #FFF3CC;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-details .body-detail-delete {
+  text-align: right;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #FFC500;
+  padding: 10px;
+  border-radius: 10px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .body-task-label {
+  display: flex;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .body-task {
+  display: flex;
+  flex-direction: column;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .body-task-detail {
+  display: flex;
+  align-items: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .body-task-input {
+  background-color: #FFF3CC;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col1 {
+  width: 100px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col2 {
+  width: 80px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col3 {
+  width: 80px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col4 {
+  width: 70px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col5 {
+  width: 70px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col6 {
+  width: 70px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col7 {
+  width: 70px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col8 {
+  width: 40px;
+  text-align: center;
+  margin: 0;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col9 {
+  width: 25px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-col10 {
+  width: 25px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .body-task-add {
+  display: flex;
+  align-items: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-tasks .task-add-input {
+  border: 0;
+  padding: 0;
+  font-size: 14px;
+  height: 22px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments {
+  border: 2px solid #FFC500;
+  padding: 10px 10px 5px 10px;
+  border-radius: 10px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment-add {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment-add .add-space {
+  width: 80px;
+  font-size: 14px;
+  text-align: right;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment-add .add-button {
+  width: 80px;
+  margin-left: 5px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment-add .add-text {
+  width: 477px;
+  margin: 0 0 0 1%;
+  padding-right: 5px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment .body-comment-date {
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment .body-comment-text {
+  width: 480px;
+  padding: 5px 0 5px 5px;
+  border: 1px solid #FFC500;
+  border-radius: 10px;
+  margin: 0 1% 0 1%;
+  background-color: #FFF3CC;
+  font-size: 14px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment .body-comment-delete {
+  width: 25px;
+}
+#catisoproduction .projects-container .project-container .project-body .body-comments .body-comment .body-comment-save {
+  width: 25px;
+}
+#catisoproduction #catisofooter {
+  width: 100%;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top: 2px solid #FFC500;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=index.css.map */
